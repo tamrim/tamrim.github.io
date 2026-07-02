@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tamri Matiashvili</title>
+<meta name="description" content="Tamri Matiashvili is a Ph.D. candidate in Economics at Stanford University working at the intersection of economic history, labor economics, and health economics.">
+<meta property="og:title" content="Tamri Matiashvili">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.tamrim.com/">
+<meta property="og:description" content="Ph.D. candidate in Economics, Stanford University. Economic history, labor economics, and health economics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1b19;
+    --muted: #6f6a63;
+    --accent: #8a3033;        /* deep madder red — links */
+    --accent-dark: #5f1f22;
+    --rule: #e5e1da;
+    --paper: #ffffff;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 4rem;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 120ms ease, color 120ms ease;
+  }
+  a:hover, a:focus-visible { border-bottom-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- top nav ---------- */
+  nav {
+    display: flex;
+    gap: 1.75rem;
+    margin-bottom: 3rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  nav a { color: var(--muted); }
+  nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* ---------- header ---------- */
+  header {
+    display: flex;
+    gap: 2.25rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  .intro { flex: 1; }
+
+  h1 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 500;
+    font-size: 2.35rem;
+    line-height: 1.1;
+    margin: 0 0 0.4rem;
+    letter-spacing: -0.01em;
+  }
+  .affiliation {
+    color: var(--muted);
+    margin: 0 0 1.4rem;
+    font-size: 1.02rem;
+  }
+  .affiliation span { display: block; }
+
+  .portrait {
+    width: 170px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    display: block;
+  }
+
+  .contact-line {
+    margin-top: 1.4rem;
+    font-size: 0.95rem;
+  }
+  .contact-line a + a::before {
+    content: "·";
+    color: var(--muted);
+    margin: 0 0.65rem;
+    display: inline-block;
+    border-bottom: none;
+  }
+  .name-note {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  /* ---------- sections ---------- */
+  h2 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 3.2rem 0 0.4rem;
+  }
+  h2::after {
+    content: "";
+    display: block;
+    width: 2.2rem;
+    height: 2px;
+    background: var(--accent);
+    margin-top: 0.55rem;
+  }
+  .section-note {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0.9rem 0 0;
+  }
+
+  /* ---------- papers ---------- */
+  .paper { margin-top: 1.9rem; }
+  .paper-title {
+    font-weight: 600;
+    font-size: 1.06rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+  .paper-title a { color: var(--ink); }
+  .paper-title a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .coauthors, .venue {
+    margin: 0.15rem 0 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  .venue em { color: var(--ink); font-style: italic; }
+  .award { color: var(--accent-dark); }
+  .paper-links {
+    margin-top: 0.35rem;
+    font-size: 0.92rem;
+  }
+  .paper-links > * + *::before {
+    content: "·";
+    color: var(--muted);
+    margin: 0 0.55rem;
+  }
+
+  /* ---------- abstracts ---------- */
+  details { display: inline; }
+  details summary {
+    display: inline;
+    cursor: pointer;
+    color: var(--accent);
+    list-style: none;
+    font-size: 0.92rem;
+    user-select: none;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: " +"; }
+  details[open] summary::after { content: " −"; }
+  details summary:hover { border-bottom: 1px solid var(--accent); }
+  .abstract {
+    display: block;
+    margin: 0.7rem 0 0.3rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--rule);
+    color: #3d3a36;
+    font-size: 0.95rem;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  /* ---------- teaching ---------- */
+  .teaching-item { margin-top: 1.4rem; }
+  .teaching-item p { margin: 0; }
+  .teaching-item ul {
+    margin: 0.3rem 0 0;
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  .teaching-item li { margin-top: 0.15rem; }
+
+  footer {
+    margin-top: 4.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 620px) {
+    header { flex-direction: column-reverse; gap: 1.5rem; }
+    .portrait { width: 150px; }
+    h1 { font-size: 2rem; }
+    .abstract { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav aria-label="Site">
+    <a href="#research">Research</a>
+    <a href="#teaching">Teaching</a>
+    <a href="files/Matiashvili_CV.pdf">CV</a>
+  </nav>
+
+  <header>
+    <div class="intro">
+      <h1>Tamri Matiashvili</h1>
+      <p class="affiliation">
+        <span>Ph.D. Candidate in Economics</span>
+        <span>Stanford University</span>
+      </p>
+      <p>
+        I am a Ph.D. candidate in economics at Stanford University working at the
+        intersection of economic history, labor economics, and health economics.
+        My research studies how access to education and high-skill labor markets
+        shapes the productivity of professions, and how consumer preferences
+        interact with these dynamics. I also examine the role of medical
+        interventions in the mortality transition.
+      </p>
+      <p class="contact-line">
+        <a href="mailto:tamrim@stanford.edu">tamrim@stanford.edu</a><a href="files/Matiashvili_CV.pdf">Curriculum vitae</a>
+      </p>
+      <p class="name-note">Note: you may also see my name listed as Tamar.</p>
+    </div>
+    <img class="portrait" src="images/profile.jpg" alt="Tamri Matiashvili">
+  </header>
+
+  <main id="research">
+
+    <h2>Publications &amp; Forthcoming</h2>
+
+    <article class="paper">
+      <p class="paper-title"><a href="https://drive.google.com/file/d/1bjJlf2Bh7vuwppeqMw74a0EvPkWc3wWK/view?usp=sharing">Culture, Economic Stress, and Missing Girls</a></p>
+      <p class="coauthors">with <a href="https://sites.google.com/view/viktormalein/about-me">Viktor Malein</a> and <a href="https://fjbeltrantapia.github.io/">Francisco Beltrán Tapia</a></p>
+      <p class="venue">Accepted, <em>Journal of Economic History</em></p>
+      <div class="paper-links">
+        <a href="https://drive.google.com/file/d/1bjJlf2Bh7vuwppeqMw74a0EvPkWc3wWK/view?usp=sharing">PDF</a>
+        <a href="https://cepr.org/publications/dp18761">CEPR Discussion Paper DP18761</a>
+        <details><summary>Abstract</summary>
+          <span class="abstract">Cultural norms play a pivotal role in shaping how societies respond to crises. This study examines the causal effect of ethnic-specific gender norms on gender-biased mortality during resource shocks. Studying the 1891&ndash;1892 Russian famine, we compare cohorts born before and after the famine in districts differentially affected by the famine and with diverse gender norms. Our findings reveal that areas where women were depicted more negatively suffered a more skewed sex ratio favouring male survival. Our empirical exercise further stresses the importance of the cultural channel in driving these results and emphasizes the role of agency in survival outcomes. This study sheds light on the profound influence of cultural norms on survival-relevant decisions during crises, pointing at culturally ingrained channels of discrimination.</span>
+        </details>
+      </div>
+    </article>
+
+    <article class="paper">
+      <p class="paper-title"><a href="https://drive.google.com/file/d/1GS_4KaZLMDd5LMsxDU6WPoh4reAPxTaZ/view?usp=sharing">Intergenerational Mobility over Two Centuries</a></p>
+      <p class="coauthors">with <a href="https://ranabr.people.stanford.edu/">Ran Abramitzky</a> and <a href="https://lboustan.scholar.princeton.edu/">Leah Boustan</a></p>
+      <p class="venue"><em>The Handbook of Intergenerational Mobility</em> (forthcoming)</p>
+      <div class="paper-links">
+        <a href="https://drive.google.com/file/d/1GS_4KaZLMDd5LMsxDU6WPoh4reAPxTaZ/view?usp=sharing">PDF</a>
+        <a href="https://www.nber.org/papers/w33330">NBER Working Paper 33330</a>
+        <details><summary>Abstract</summary>
+          <span class="abstract">This paper provides an overview of recent empirical and methodological advances in the study of historical intergenerational mobility trends, with a focus on key measurement challenges. These advances are made possible by the recent digitization of historical censuses and new methods of historical record-linking, which have enabled researchers to create large historical samples of parent-child links. We identify three main findings. First, absolute mobility increased in the decades leading up to 1940 but has since declined, both in the US and other industrial countries. Second, recent studies on relative mobility question the classic narrative that the US has transitioned from a &ldquo;land of opportunity&rdquo; in the 19th century to a less mobile society today, suggesting that mobility was not as high in the past. However, estimates of relative mobility are sensitive to choices regarding sample selection and measurement. Third, we explore mechanisms underlying shifts in intergenerational mobility over time, including geographic mobility, wealth shocks, educational attainment, locational effects, and the transmission of parent-specific human capital. We conclude by suggesting avenues for future research.</span>
+        </details>
+      </div>
+    </article>
+
+    <article class="paper">
+      <p class="paper-title"><a href="https://drive.google.com/file/d/1qKEZdmHiVbXgPIIU9kMjnySsWSaEAoTL/view?usp=sharing">Modernization in Progress: Part-Year Operation, Capital Accumulation, and Labor Force Composition in Late Imperial Russia</a></p>
+      <p class="coauthors">with <a href="https://amandagreggeconomics.com/">Amanda Gregg</a></p>
+      <p class="venue"><em>Journal of Economic History</em> 82.4 (2022): 1143&ndash;82 &nbsp;·&nbsp; <span class="award">Runner-up, Arthur H. Cole Prize (2023)</span></p>
+      <div class="paper-links">
+        <a href="https://drive.google.com/file/d/1qKEZdmHiVbXgPIIU9kMjnySsWSaEAoTL/view?usp=sharing">PDF</a>
+        <a href="https://www.cambridge.org/core/journals/journal-of-economic-history/article/modernization-in-progress-partyear-operation-mechanization-and-labor-force-composition-in-late-imperial-russia/A1C8992A6A2DD7A5E26386EEB6A2E1D7">Journal version</a>
+        <details><summary>Abstract</summary>
+          <span class="abstract">This paper investigates part-year factory operation, a common but understudied dimension of industrializing economies, in a prototypical late-industrializing setting that offers rich factory-level data: Imperial Russia. Newly compiled data provides detailed descriptions of all Russian manufacturing firms operating in 1894 and shows that factories operating a greater number of annual working days were more mechanized, more urban, more likely to employ women and children, more productive, and more likely to survive. Rather than arguing that part-year operation demonstrated Russia&rsquo;s uniquely inexorable backwardness, we stress operating time&rsquo;s relationship to fundamental drivers of growth including urbanization, geography, and institutions.</span>
+        </details>
+      </div>
+    </article>
+
+    <h2>Working Papers</h2>
+
+    <article class="paper">
+      <p class="paper-title">Talent, Trust, and Health: The Effects of the First Female Physicians</p>
+      <p class="venue">Draft available upon request &nbsp;·&nbsp; <span class="award"><a href="https://news.stanford.edu/stories/2025/04/inaugural-three-minute-thesis-competition-winners">2nd Place, Stanford&rsquo;s Inaugural 3-Minute Thesis Competition</a></span></p>
+      <div class="paper-links">
+        <a href="https://www.youtube.com/watch?v=c8GEpWd3g_8">Video</a>
+        <details><summary>Abstract</summary>
+          <span class="abstract">How did the entry of women into high-skill occupations shape the productivity of those professions? This paper examines the large-scale entry of female physicians into the medical profession following the opening of the world&rsquo;s first full-length medical school for women in the Russian Empire in 1872. I digitize novel annual data on physician employment and vital statistics in more than 330 districts from 1876 to 1910, as well as data on direct healthcare provision metrics from 1876 to 1888. Using a staggered difference-in-differences design based on quasi-random timing of replacement hires of general practitioners in the rural public healthcare system of the Russian Empire, I find that the first female physician entry led to large and persistent declines in infant mortality (5&ndash;7%) and in young adult mortality of both sexes, resulting in faster population growth and increased life expectancy. The first female physicians improved hospital care and drew more female patients to formal medical care, as suggested by their displacement of midwives. I construct physician-level estimates of medical value added and develop a conceptual framework to disentangle productivity differences from demand-side concordance-preference mechanisms. The evidence indicates that the observed mortality declines reflect both the greater effectiveness of the earliest female physicians relative to incumbent male doctors and increased care-seeking among women. I then test the long-run implications of this framework using modern data.</span>
+        </details>
+      </div>
+    </article>
+
+    <article class="paper">
+      <p class="paper-title"><a href="https://drive.google.com/file/d/1TtbFYBF6E8-Ql876NE1P3gqFJtyzpnlv/view?usp=sharing">Paid Caregiving Leave Policies and an Update on Paid Parental Leave</a></p>
+      <p class="coauthors">with <a href="https://sites.google.com/site/priyankaanand">Priyanka Anand</a> and <a href="http://web.stanford.edu/~mrossin/">Maya Rossin-Slater</a></p>
+      <p class="venue">In preparation for the <em>Oxford Handbook on the Economics of Care</em></p>
+      <div class="paper-links">
+        <a href="https://drive.google.com/file/d/1TtbFYBF6E8-Ql876NE1P3gqFJtyzpnlv/view?usp=sharing">PDF</a>
+        <a href="https://www.nber.org/papers/w34997">NBER Working Paper 34997</a>
+        <details><summary>Abstract</summary>
+          <span class="abstract">Paid leave policies are designed to help workers balance work with caregiving responsibilities, yet research has focused predominantly on parental leave while the literature on non-parental caregiving leave remains nascent. This chapter reviews the evidence on the impacts of paid family leave (PFL) and paid sick leave (PSL) policies, with a focus on non-childbirth-related caregiving. We begin with an overview of the prevalence and challenges of informal caregiving in the US and internationally, followed by a description of the current paid caregiving leave policy landscape. We then review evidence on the impact of these policies on leave take-up, labor market outcomes, caregiver health and well-being, employer outcomes, and utilization of formal care. We find that paid leave policies have successfully increased leave take-up and that PFL improves labor market outcomes for workers with caregiving responsibilities, without adversely affecting employers. There is also some suggestive evidence of improvements in caregivers&rsquo; mental health. We additionally provide an update of the paid parental leave literature since it was last reviewed by Rossin-Slater (2018), describing the latest evidence on maternal health, child health and development, parental labor market outcomes, and employer outcomes. We conclude by identifying key gaps in the literature, including the lack of research on the outcomes of (non-child) care recipients, limited evidence on employer responses, and the underexplored role of PSL in supporting caregiving needs.</span>
+        </details>
+      </div>
+    </article>
+
+    <article class="paper">
+      <p class="paper-title"><a href="https://drive.google.com/file/d/1j5hEeEsK8s5aIT-C9aRUIh5Z0nueluAR/view">Cultural Links and Technology Diffusion: Evidence from Industry in Late Imperial Russia</a></p>
+      <p class="coauthors">with <a href="https://sites.google.com/view/natkhov/home">Timur Natkhov</a></p>
+      <div class="paper-links">
+        <a href="https://drive.google.com/file/d/1j5hEeEsK8s5aIT-C9aRUIh5Z0nueluAR/view">PDF</a>
+        <details><summary>Abstract</summary>
+          <span class="abstract">This paper examines the impact of ethnic connections on the diffusion of technology in a late-industrializing economy. Using machine learning we assigned probable ethnicities to nearly 16,000 industrial firm owners in the Russian Empire in 1894. We then compared firms owned by entrepreneurs with cultural connections to Europe (e.g., Germans and Poles) to Russian-owned firms. &ldquo;Connected&rdquo; firms exhibited higher productivity, employed modern machinery and advanced management practices. We established the knowledge diffusion channel by showing, among others, that &ldquo;connected&rdquo; firms traded more with Europe, and that German-origin entrepreneurs had the largest productivity advantage in chemicals &ndash; Germany&rsquo;s leading industry at the time. Our findings highlight the importance of cultural links in the diffusion of the Industrial Enlightenment from the industrial core of Europe to its periphery.</span>
+        </details>
+      </div>
+    </article>
+
+    <h2>Selected Works in Progress</h2>
+
+    <article class="paper">
+      <p class="paper-title">Understanding Variation in Preferences for Patient&ndash;Physician Concordance: Gender and Specialty</p>
+      <p class="coauthors">with <a href="https://sites.google.com/view/helen-kissel/">Helen Kissel</a> and <a href="https://www.helenaroy.com/">Helena Roy</a></p>
+    </article>
+
+    <article class="paper">
+      <p class="paper-title">Physician Value Added in the Pre-Antibiotic Era</p>
+    </article>
+
+    <article class="paper">
+      <p class="paper-title">Improvements in Urban Sanitation and Child Mortality Decline: The Case of the Russian Empire</p>
+      <p class="coauthors">with <a href="https://sites.google.com/view/viktormalein/about-me">Viktor Malein</a></p>
+    </article>
+
+    <h2 id="teaching">Teaching</h2>
+    <p class="section-note">Teaching assistantships at Stanford University &nbsp;·&nbsp; overall average student rating: 4.8/5</p>
+
+    <div class="teaching-item">
+      <p><strong>Empirical Methods in Public Policy</strong> (Public Policy Department)</p>
+      <ul>
+        <li>Spring 2026 &nbsp;·&nbsp; <a href="https://drive.google.com/file/d/1l0xH9LrQAveKwxA30LOSsXW7m9JaA4wH/view?usp=sharing">Teaching evaluation</a></li>
+        <li>Winter 2026 &nbsp;·&nbsp; <a href="https://drive.google.com/file/d/1Upcsh_BkE3JlhH3sy2_C5xf5S-at2mvZ/view?usp=sharing">Teaching evaluation</a></li>
+        <li>Spring 2025 &nbsp;·&nbsp; <a href="https://drive.google.com/file/d/1nsJED0dvFphhX6SwZif0-9EHaAdScbeL/view?usp=sharing">Teaching evaluation</a></li>
+        <li>Winter 2025 &nbsp;·&nbsp; <a href="https://drive.google.com/file/d/1GKwK8_jKM-ovIB46zlwCoZajmcgXu0rT/view?usp=sharing">Teaching evaluation</a></li>
+      </ul>
+    </div>
+
+    <div class="teaching-item">
+      <p><strong>Economics from Outer Space</strong> (Economics Department)</p>
+      <ul>
+        <li>Spring 2024 &nbsp;·&nbsp; <a href="https://drive.google.com/file/d/1WnUWttYuyrNohYU_S8n9O-FJuPSbXjQ_/view?usp=sharing">Teaching evaluation</a> &nbsp;·&nbsp; <span class="award">Outstanding TA Award (Economics Department)</span></li>
+      </ul>
+    </div>
+
+    <div class="teaching-item">
+      <p><strong>Invited lectures:</strong> Topics in Economic History, Stanford Economics (Winter 2025, Winter 2026); Big Brain SF, general public (Summer 2025)</p>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Tamri Matiashvili
+  </footer>
+
+</div>
+</body>
+</html>
