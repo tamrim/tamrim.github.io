@@ -18,7 +18,7 @@
   :root {
     --ink: #1c1b19;
     --muted: #6f6a63;
-    --accent: #8a3033;        /* deep madder red — links */
+    --accent: #8a3033;
     --accent-dark: #5f1f22;
     --rule: #e5e1da;
     --paper: #ffffff;
@@ -45,7 +45,7 @@
   .page {
     max-width: 840px;
     margin: 0 auto;
-    padding: 4rem 2rem 4.5rem;
+    padding: 2.5rem 2rem 4.5rem;
   }
 
   a {
@@ -57,11 +57,10 @@
   a:hover, a:focus-visible { border-bottom-color: var(--accent); }
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-  /* ---------- top nav ---------- */
   nav {
     display: flex;
     gap: 1.75rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     font-size: 0.82rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -69,12 +68,11 @@
   nav a { color: var(--muted); }
   nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
-  /* ---------- header ---------- */
   header {
     display: flex;
     gap: 2.25rem;
     align-items: flex-start;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   .intro { flex: 1; }
 
@@ -88,12 +86,12 @@
   }
 .affiliation {
   color: var(--muted);
-  margin: 0 0 0.6rem;      
+  margin: 0 0 0.6rem;
   font-size: 1.02rem;
 }
   .affiliation span { display: block; }
 .bio { margin: 0.6rem 0 1rem; }
-  
+
   .portrait {
     width: 250px;
     flex-shrink: 0;
@@ -102,7 +100,7 @@
   }
 
 .contact-line {
-  margin-top: 0.6rem;  
+  margin-top: 0.6rem;
   font-size: 0.95rem;
 }
   .contact-line a + a::before {
@@ -127,14 +125,13 @@
     margin-top: 0.5rem;
   }
 
-  /* ---------- sections ---------- */
   h2 {
     font-family: "Newsreader", Georgia, serif;
     font-weight: 500;
     font-size: 1.05rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    margin: 3.2rem 0 0.4rem;
+    margin: 2.4rem 0 0.4rem;
   }
   h2::after {
     content: "";
@@ -150,8 +147,7 @@
     margin: 0.9rem 0 0;
   }
 
-  /* ---------- papers ---------- */
-  .paper { margin-top: 1.9rem; }
+  .paper { margin-top: 1.3rem; }
   .paper-title {
     font-weight: 600;
     font-size: 1.06rem;
@@ -177,7 +173,6 @@
     margin: 0 0.55rem;
   }
 
-  /* ---------- abstracts ---------- */
   details { display: inline; }
   details summary {
     display: inline;
@@ -202,7 +197,6 @@
     hyphens: auto;
   }
 
-  /* ---------- teaching ---------- */
   .teaching-item { margin-top: 1.4rem; }
   .teaching-item p { margin: 0; }
   .teaching-item ul {
@@ -267,7 +261,7 @@
 
     <article class="paper">
       <p class="paper-title">Talent, Trust, and Health: The Effects of the First Female Physicians</p>
-      <!-- When the JMP pdf is uploaded, wrap the title: <a href="files/Matiashvili_JMP.pdf" target="_blank" rel="noopener">...</a> -->
+
       <p class="venue">Draft available upon request &nbsp;·&nbsp; <span class="award"><a href="https://news.stanford.edu/stories/2025/04/inaugural-three-minute-thesis-competition-winners" target="_blank" rel="noopener">2nd Place, Stanford&rsquo;s Inaugural 3-Minute Thesis Competition</a></span></p>
       <div class="paper-links">
         <a href="https://www.youtube.com/watch?v=c8GEpWd3g_8" target="_blank" rel="noopener">Video</a>
@@ -390,7 +384,6 @@
     &copy; 2026 Tamri Matiashvili
   </footer>
 
-  
 </div>
 </body>
 </html>
