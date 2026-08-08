@@ -117,7 +117,19 @@
   .committee {
     margin-top: 1rem;
     margin-bottom: 0;
+    padding-bottom: 1.1rem;
     font-size: 0.95rem;
+  }
+  .advisor-primary { position: relative; }
+  .advisor-role {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.1;
+    white-space: nowrap;
   }
   .name-note {
     color: var(--muted);
@@ -255,7 +267,7 @@
     <p class="contact-line">
       <a href="mailto:tamrim@stanford.edu">tamrim@stanford.edu</a><a href="files/Matiashvili_CV.pdf" target="_blank" rel="noopener">Curriculum Vitae</a><a href="https://scholar.google.com/citations?user=l0fGDLoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
     </p>
-    <p class="committee"><strong>Dissertation committee:</strong> <a href="mailto:ranabr@stanford.edu">Ran Abramitzky</a> <em>(primary)</em>, <a href="mailto:perssonp@stanford.edu">Petra Persson</a>, <a href="mailto:mpolyak@stanford.edu">Maria Polyakova</a>, <a href="mailto:avoena@stanford.edu">Alessandra Voena</a></p>
+    <p class="committee"><strong>Dissertation committee:</strong> <span class="advisor-primary"><a href="mailto:ranabr@stanford.edu">Ran Abramitzky</a><span class="advisor-role">(primary)</span></span>, <a href="mailto:perssonp@stanford.edu">Petra Persson</a>, <a href="mailto:mpolyak@stanford.edu">Maria Polyakova</a>, <a href="mailto:avoena@stanford.edu">Alessandra Voena</a></p>
   </div>
 </header>
 
