@@ -117,14 +117,15 @@
   .committee {
     margin-top: 1rem;
     margin-bottom: 0;
-    padding-bottom: 1.1rem;
     font-size: 0.95rem;
   }
-  .advisor-primary { position: relative; }
+  .advisor-primary {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+  }
   .advisor-role {
-    position: absolute;
-    left: 0;
-    top: 100%;
+    display: block;
     font-size: 0.82rem;
     font-style: italic;
     color: var(--muted);
